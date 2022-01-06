@@ -1,0 +1,18 @@
+<style>
+  a {
+    margin: 20px;
+  }
+</style>
+<div style="text-align: center;">
+  <h1>
+    Routing and Navigation
+  </h1>
+</div>
+<nav>
+  <a routerLink="/" routerLinkActive="active">Home</a>
+  <a routerLink="/posts" routerLinkActive="active">Post</a>
+  <a routerLink="/profile" routerLinkActive="active">Profile</a>
+  <a *ngIf="!isLogged" routerLink="/login" routerLinkActive="active">Login</a>
+  <button *ngIf="isLogged" (click)="logout()" >Logout</button>
+</nav>
+<router-outlet></router-outlet>
